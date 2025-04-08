@@ -4,7 +4,7 @@ This repository contains my submissions for **Algorithms, Part I** course from *
 
 The course is currently free to join in the url: https://www.coursera.org/learn/algorithms-part1
 
-# Setup
+## Setup
 
 To use the code in this repo for reference purposes, you need two thing.
 1. [algs4.jar](https://algs4.cs.princeton.edu/code/algs4.jar) binary
