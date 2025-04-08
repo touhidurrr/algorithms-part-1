@@ -1,0 +1,9 @@
+.idea/
+.vscode/
+
+libs/
+out/
+
+*.zip
+*.class
+*.jar
