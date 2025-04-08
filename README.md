@@ -1,6 +1,10 @@
+# Algorithms, Part I Submissions
+
 This repository contains my submissions for **Algorithms, Part I** course from **Princeton University** in **Coursera**. I attemptted to get 100% score on everything (including bonus). The repository is here so that I do not lose the code and can use them later for my personal reference. However, I dont really mind other people seeing my code so a BSD-3-Clause license is provided.
 
 The course is currently free to join in the url: https://www.coursera.org/learn/algorithms-part1
+
+# Setup
 
 To use the code in this repo for reference purposes, you need two thing.
 1. [algs4.jar](https://algs4.cs.princeton.edu/code/algs4.jar) binary
