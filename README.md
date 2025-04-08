@@ -18,8 +18,8 @@ And for VS Code support, I added my `.vscode` folder so it should work too.
 
 So, you only need to run the following commands to get autocompletion:
 ```bash
-git clone https://github.com/touhidurrr/algorithms-part1.git
-cd algorithms-part1
+git clone https://github.com/touhidurrr/algorithms-part-1.git
+cd algorithms-part-1
 mkdir libs
 curl -o libs/algs4.jar https://algs4.cs.princeton.edu/code/algs4.jar
 ```
