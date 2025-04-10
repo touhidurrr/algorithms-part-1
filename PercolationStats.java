@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.StdStats;
 
 public class PercolationStats {
     private static final double Z_SCORE = 1.96;
-    private final double[] percolationRate;
+    private final double[] openSitesRatio;
     private double meanCache;
     private double stddevCache;
 
@@ -12,7 +12,7 @@ public class PercolationStats {
     public PercolationStats(int n, int trials) {
         if (n < 1 || trials < 1) throw new IllegalArgumentException();
 
-        this.percolationRate = new double[trials];
+        this.openSitesRatio = new double[trials];
 
         for (int i = 0; i < trials; ++i) {
             Percolation p = new Percolation(n);
@@ -28,7 +28,7 @@ public class PercolationStats {
                 }
             }
 
-            percolationRate[i] = ((double) p.numberOfOpenSites()) / (n * n);
+            openSitesRatio[i] = ((double) p.numberOfOpenSites()) / (n * n);
         }
     }
 
@@ -44,23 +44,23 @@ public class PercolationStats {
 
     // sample mean of percolation threshold
     public double mean() {
-        if (meanCache == 0) meanCache = StdStats.mean(percolationRate);
+        if (meanCache == 0) meanCache = StdStats.mean(openSitesRatio);
         return meanCache;
     }
 
     // sample standard deviation of percolation threshold
     public double stddev() {
-        if (stddevCache == 0) stddevCache = StdStats.stddev(percolationRate);
+        if (stddevCache == 0) stddevCache = StdStats.stddev(openSitesRatio);
         return stddevCache;
     }
 
     // low endpoint of 95% confidence interval
     public double confidenceLo() {
-        return this.mean() - (Z_SCORE * this.stddev()) / Math.sqrt(this.percolationRate.length);
+        return this.mean() - (Z_SCORE * this.stddev()) / Math.sqrt(this.openSitesRatio.length);
     }
 
     // high endpoint of 95% confidence interval
     public double confidenceHi() {
-        return this.mean() + (Z_SCORE * this.stddev()) / Math.sqrt(this.percolationRate.length);
+        return this.mean() + (Z_SCORE * this.stddev()) / Math.sqrt(this.openSitesRatio.length);
     }
 }

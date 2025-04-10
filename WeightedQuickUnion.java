@@ -21,18 +21,8 @@ public class WeightedQuickUnion {
         return p;
     }
 
-    public boolean connected(int p, int q) {
-        while (parent[p] != p) {
-            parent[p] = parent[parent[p]];
-            p = parent[p];
-        }
-
-        while (parent[q] != q) {
-            parent[q] = parent[parent[q]];
-            q = parent[q];
-        }
-
-        return p == q;
+    public boolean isConnected(int p, int q) {
+        return find(p) == find(q);
     }
 
     public void union(int p, int q) {

@@ -32,7 +32,7 @@ public class Percolation {
     }
 
     private boolean isOutsideRange(int x, int y) {
-        return (x <= 0) || (y <= 0) || (x > this.n) || (y > this.n);
+        return (x < 1) || (y < 1) || (x > this.n) || (y > this.n);
     }
 
     // opens the site (row, col) if it is not open already
